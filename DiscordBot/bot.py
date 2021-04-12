@@ -15,15 +15,6 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 
 bot = commands.Bot(command_prefix='!')
 
-@bot.command(name='helpme')
-async def image(ctx):
-    await ctx.send('!help for help, !domainsearch to search domains with sublister and crtsh, !backup to back up domains.txt to domains_backup.txt, !httprobe to check the domains.txt list and save alive domains to valid.txt')
-
-@bot.command(name='98')
-async def image(ctx):
-    with open('allowed_domains.txt', 'rb') as fp:
-        await ctx.send(file=discord.File(fp, 'allowed_domains.txt'))
-
 @bot.command(name='domainsearch')
 async def image(ctx):
     # Clear domains.txt
